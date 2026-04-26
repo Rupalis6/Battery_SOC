@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 # ===============================
 @st.cache_resource
 def load_artifacts():
-    model_path = "ann_model.h5"
+    model = load_model("ann_model.keras", compile=False, safe_mode=False)
     scaler_path = "scaler.pkl"
 
     # Check if files exist
